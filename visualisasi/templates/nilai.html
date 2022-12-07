@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Nilai Akhir Visualisasi Informasi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container mt-3 mx-2">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Tugas 1</th>
+                    <th scope="col">Tugas 2</th>
+                    <th scope="col">Tugas 3</th>
+                    <th scope="col">Tugas 4</th>
+                    <th scope="col">Tugas 5</th>
+                    <th scope="col">Tugas 6</th>
+                    <th scope="col">Tugas 9</th>
+                    <th scope="col">Tugas 10 - 11</th>
+                    <th scope="col">Tugas 12</th>
+                    <th scope="col">UTP</th>
+                    <th scope="col">UAP</th>
+                    <th scope="col">Nilai Akhir</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        {{ nilai.prak1.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak2.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak3.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak4.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak5.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak6.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak9.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak10_11.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.prak12.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.utp.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.uap.0 }}
+                    </td>
+                    <td>
+                        {{ nilai.final.0 }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
