@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'visualisasi.apps.VisualisasiConfig',
     'pandas',
-    'visualisasi.nilai',
 ]
 
 MIDDLEWARE = [
