@@ -14,65 +14,97 @@
 </head>
 
 <body>
-    <div class="container mt-3 mx-2">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Tugas 1</th>
-                    <th scope="col">Tugas 2</th>
-                    <th scope="col">Tugas 3</th>
-                    <th scope="col">Tugas 4</th>
-                    <th scope="col">Tugas 5</th>
-                    <th scope="col">Tugas 6</th>
-                    <th scope="col">Tugas 9</th>
-                    <th scope="col">Tugas 10 - 11</th>
-                    <th scope="col">Tugas 12</th>
-                    <th scope="col">UTP</th>
-                    <th scope="col">UAP</th>
-                    <th scope="col">Nilai Akhir</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        {{ nilai.prak1.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak2.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak3.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak4.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak5.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak6.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak9.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak10_11.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.prak12.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.utp.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.uap.0 }}
-                    </td>
-                    <td>
-                        {{ nilai.final.0 }}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="container-fluid mt-3 mx-2">
+        <div class="row">
+            <div class="col col-sm-12 col-md-12 col-lg-9">
+                <table class="table table-borderless table-responsive">
+                    <tbody>
+                        <tr>
+                            <td scope="row" width="20%">Nama Lengkap</td>
+                            <td width="1%">:</td>
+                            <td>
+                            {{ nilai.nama.0 }}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row" width="20%">NPM</td>
+                            <td width="1%">:</td>
+                            <td>
+                            {{ nilai.npm.0 }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col col-sm-12 col-md-12 col-lg-3">
+                <div class="card text-center" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item fw-bold fs-2">{{ mutu.0 }}</li>
+                        <li class="list-group-item">{{ nilai.final.0 }}</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="table-responsive mt-2">
+
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th scope="col">Tugas 1</th>
+                        <th scope="col">Tugas 2</th>
+                        <th scope="col">Tugas 3</th>
+                        <th scope="col">Tugas 4</th>
+                        <th scope="col">Tugas 5</th>
+                        <th scope="col">Tugas 6</th>
+                        <th scope="col">Tugas 9</th>
+                        <th scope="col">Tugas 10 - 11</th>
+                        <th scope="col">Tugas 12</th>
+                        <th scope="col">UTP</th>
+                        <th scope="col">UAP</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {{ nilai.prak1.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak2.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak3.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak4.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak5.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak6.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak9.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak10_11.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.prak12.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.utp.0 }}
+                        </td>
+                        <td>
+                            {{ nilai.uap.0 }}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 

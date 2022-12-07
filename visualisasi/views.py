@@ -3,24 +3,30 @@ from django.http import HttpResponse
 from django.template import loader
 from django.middleware.csrf import get_token
 import pandas as pd
+from nilai import *
 
 # Create your views here.
 def index(request):
     token = get_token(request)
-    template = loader.get_template('index.html')
+    get_all_data()
     context = {
         'csrf_token': token,
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, 'index.html', context)
 
 def showNilai(request):
     npm = request.POST['npm']
-    data = pd.read_csv('https://raw.githubusercontent.com/adivii/visualisasi_nilai_files/main/Daftar%20Nilai%20-%20csv-for-web.csv')
-    nilai = data[data['npm'] == int(npm)]
+    
+    nilai = get_data(npm)
+    
+    mutu = (nilai['final'])
+
     context = {
-        'nilai': nilai.reset_index(),
+        'nilai': nilai,
         'npm': npm,
+        'mutu': huruf_mutu(float(mutu))
     }
 
-    template = loader.get_template('nilai.html')
-    return HttpResponse(template.render(context, request))
+    # return HttpResponse(mutu)
+    
+    return render(request, 'nilai.html', context)
