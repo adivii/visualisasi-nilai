@@ -15,6 +15,11 @@
 
 <body>
     <div class="card mt-3 mx-auto" style="width: 18rem;">
+        {% if request.session.status == 0 %}
+        <div class="m-2 alert alert-danger" role="alert">
+            NPM tidak ditemukan!
+        </div>
+        {% endif %}
         <div class="card-body">
             <h5 class="card-title">Lihat Nilai Anda</h5>
             <p class="card-text">

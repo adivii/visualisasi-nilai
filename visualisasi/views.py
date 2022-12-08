@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 from django.middleware.csrf import get_token
@@ -17,9 +17,14 @@ def showNilai(request):
     npm = request.POST['npm']
     
     nilai = get_data(npm)
+
+    request.session['status'] = 1
+
+    if nilai.empty:
+        request.session['status'] = 0
+        return redirect('/')
     
     mutu = (nilai['final'])
-
     context = {
         'nilai': nilai,
         'npm': npm,
@@ -51,4 +56,7 @@ def get_all_data():
 
 def get_data(npm):
     data = pd.read_csv('https://raw.githubusercontent.com/adivii/visualisasi_nilai_files/main/Daftar%20Nilai%20-%20csv-for-web.csv')
+    # if int(npm) in data['npm']:
+    # else:
+    #     return 'error'    
     return data[data['npm'] == int(npm)].reset_index()
